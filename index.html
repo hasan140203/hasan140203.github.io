@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>lab3</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <header>
+        <h1>
+            <span id="name_output">Хасанхуджа</span>
+            <span id="surname_output">Турсунов</span>
+        </h1>
+    </header>
+
+    <div class="content-page">
+        <div class="main-content">
+            <div class="highlighted-block">
+                <div class="header">
+                    <img width='400' height='400' src="./images/photo1.jpg" alt="Фото">
+                </div>
+
+                <div class="input-items">
+                    <div class="cls">
+                        <div class="input-with-btn-container">
+                            <div class="input-container">
+                                <input type="text" size="22" id="name_input" required />
+                                <label>Введите ваше имя</label>
+                            </div>
+                            <button onclick="name_change()">подтвердить</button>
+                        </div>
+
+                        <div class="input-with-btn-container">
+                            <div class="input-container">
+                                <input type="text" size="22" id="surname_input" required />
+                                <label>Введите вашу фамилию</label>
+                            </div>
+                            <button onclick="surname_change()">подтвердить</button>
+                        </div>
+                    </div>
+
+                    <div class="cls">
+                        <div class="input-with-btn-container">
+                            <div class="input-container">
+                                <input type="number" id="age" required />
+                                <label>Введите ваш возраст</label>
+                            </div>
+                            <button type="button" onclick="con()">подтвердить</button>
+                        </div>
+                    </div>
+
+                    <div class="cls">
+                        <label>Напишите 5 своих увлечений:</label><br>
+                        <textarea id="hobby" cols="30" rows="2"></textarea>
+                    </div>
+                    
+                    <div class="cls">
+                        <label>Я согласен на обработку личных данных</label>
+                        <input type="checkbox" id="submition">
+                    </div>
+                    <div class="cls">
+                        <button id="submit_button" type="button" onclick="submitForm()" disabled>Отправить анкету</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="cls">
+            <div class="input-with-btn-container">
+                <div class="input-container">
+                    <input type="text" id="name" required />
+                    <label>Администратор:</label>
+                </div>
+                <button type="button" onclick="admin()">Изменить</button>
+            </div>
+        </div> 
+        
+        <div id="admin"></div>
+        
+        <div class="side-panel">
+            <div class="cls">
+                <div class="input-with-btn-container">
+                    <div class="input-container">
+                        <input type="number" id="fnum" required />
+                        <label>Первое число</label>
+                    </div>
+                    <div class="input-container">
+                        <input type="number" id="snum" required />
+                        <label>Второе число</label>
+                    </div>
+                    <button type="button" onclick="max()">Найти максимум</button>
+                </div>
+            </div>
+            <div id="result"></div>
+        </div>
+    </div>
+    
+
+
+    <script src="script1.js"></script>
+</body>
+
+</html>

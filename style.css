@@ -1,0 +1,163 @@
+body {
+    background-color: rgb(127, 133, 113);
+    margin-left: 15px;
+}
+
+h1 {
+    margin: 20px 100px;
+    padding: 20px;
+    color: white;
+    text-align: left;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 45px;
+    background-color: rebeccapurple;
+    border-radius: 20px;
+}
+
+.content-page {
+    display: flex;
+    flex-direction: row;
+}
+
+.main-content {
+    flex: 3;
+    margin-left: 100px;
+}
+
+.highlighted-block {
+    background-color: lightblue;
+    padding: 20px;
+    border-radius: 10px;
+    margin: 20px;
+}
+
+.input-items {
+    display: flex;
+    flex-direction: column;
+    margin-left: 50px;
+    margin-top: 20px;
+}
+
+.side-panel {
+    flex: 1;
+    background-color: lightcoral;
+    padding: 20px;
+    border-radius: 10px;
+    margin: 20px;
+    color: white;
+    margin-left: 100px; /* Смещение панели на 100 пикселей вправо */
+}
+
+img {
+    display: block;
+    margin: 20px auto 15px;
+}
+
+.mb-15 {
+    margin-bottom: 15px;
+    color: white;
+}
+
+.input-container {
+    position: relative;
+    margin-bottom: 25px;
+}
+
+.input-container label {
+    position: absolute;
+    top: 0;
+    left: 0;
+    font-size: 16px;
+    color: #fff;
+    pointer-events: none;
+    transition: all 0.5s ease-in-out;
+}
+
+.input-container input {
+    border: 0;
+    border-bottom: 2px solid #555;
+    background: transparent;
+    width: 100%;
+    padding: 8px 0 5px 0;
+    font-size: 16px;
+    color: #fff;
+}
+
+.input-container input:focus {
+    border-bottom: 2px solid #bc6cc4;
+    outline: none;
+}
+
+.input-container input:focus ~ label,
+.input-container input:valid ~ label {
+    top: -12px;
+    font-size: 12px;
+}
+
+.input-with-btn-container {
+    display: flex;
+    flex-direction: column;
+}
+
+button {
+    background-color: #8d1e1e;
+    color: antiquewhite;
+    border: none;
+    font-weight: bold;
+    border-radius: 5px;
+    letter-spacing: 1px;
+    transition: 0.5s;
+    cursor: pointer;
+    height: 35px;
+    margin-left: 10px;
+}
+
+button:hover {
+    background: #21052b;
+    color: #fcfcfc;
+    box-shadow: 0 0 5px #5b79bb, 0 0 25px #b5acb8, 0 0 50px #2c69af, 0 0 200px #6e457e;
+}
+
+.label-container {
+    display: flex;
+}
+
+.label-container label {
+    align-self: center;
+    margin-bottom: 0;
+}
+/* Скрыть текст метки, когда заполнитель отображается */
+.input-container label {
+    opacity: 0; /* Сделать текст метки прозрачным */
+    transition: opacity 0.3s ease-in-out; /* Добавить плавный переход */
+}
+
+/* Показать текст метки, когда пользователь начинает вводить */
+.input-container input:not(:placeholder-shown) + label {
+    opacity: 1; /* Сделать текст метки непрозрачным */
+}
+button-container button {
+    padding-top: 20px;
+    height: 70px;
+    align-self: center;
+}
+
+@media screen and (max-width: 600px) {
+    .content-page {
+        flex-direction: column;
+        margin-left: 0;
+    }
+
+    .input-items {
+        margin-left: 0;
+        margin-top: 10px;
+    }
+
+    h1 {
+        margin: 20px 0;
+    }
+
+    .side-panel {
+        margin-left: 0; /* Отменяем смещение при узких экранах */
+    }
+}
